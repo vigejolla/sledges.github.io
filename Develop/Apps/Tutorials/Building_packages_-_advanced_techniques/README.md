@@ -390,7 +390,7 @@ incremental (re)builds and shadow builds involved.
 Examples of well-written `%build` and `%install` sections follow.
 
 With qmake:
-```
+```specfile
 %build
 %qmake ARGS...
 make %{?_smp_mflags}
@@ -401,7 +401,7 @@ make %{?_smp_mflags} doc
 ```
 
 With CMake:
-```
+```specfile
 %build
 %cmake ARGS...
 make %{?_smp_mflags}
@@ -412,7 +412,7 @@ make %{?_smp_mflags} doc
 ```
 
 With GNU Automake, Autoconf and others:
-```
+```specfile
 %build
 if ! test -f Makefile; then
     %reconfigure
@@ -431,7 +431,7 @@ dependencies should be stored in the package metadata so that package
 manager can install also the dependencies when installing your package.
 We can control this metadata in the .spec files. The simple way to add a
 dependency is by adding a Requires field to fhe .spec:
-```
+```specfile
 Requires:   sailfishsilica-qt5 >= 0.10.9
 Requires:   libsailfishapp-launcher
 ```
@@ -447,13 +447,13 @@ for a single depencency using %define \_\_requires\_exclude. For
 example, if the automated depencency generation added an unwanted
 depencency to a python module called "wrongmodule", you could disable
 that by writing:
-```
+```specfile
 %define __requires_exclude python3dist.wrongmodule
 ```
 
 If you want to disable the automatic dependency generation for python
 modules completely, you can add:
-```
+```specfile
 %undefine __pythonapp_requires
 ```
 

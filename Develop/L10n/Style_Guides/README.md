@@ -27,7 +27,7 @@ culture.
 
 You'll see existing style guides peppered with templates for maximum
 re-use, e.g.
-```
+```wiki
 !INCLUDE "../Templates/Grammar_voice.mdpp"
 For example:
 * Correct: '''Create Account Settings in...'''
@@ -37,7 +37,7 @@ For example:
 If your language has a different rule than the template says (e.g.
 passive voice preferred over active), simply replace with [template's
 source](https://github.com/sledges/sledges.github.io/blob/master/Develop/L10n/Style_Guides/Templates/Grammar_voice.mdpp):
-```
+```wiki
 == Voice ==
 Whenever possible, use the passive voice. Keep the message clear and the sentences short
 

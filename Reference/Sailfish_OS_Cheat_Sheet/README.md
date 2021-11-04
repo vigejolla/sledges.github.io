@@ -15,7 +15,7 @@ which one can use alias for with following methods
 **A) (RECOMMENDED)** add following to your `~/.ssh/config` file, which
 also makes the connection easier to handle if you are using multiple
 developer devices behind same IP address
-```
+```ssh-config
 # Dev devices which constantly change the ID
 Host device
     User defaultuser or nemo

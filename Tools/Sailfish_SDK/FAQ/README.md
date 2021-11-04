@@ -171,7 +171,7 @@ this problem by setting `TARGET=plugin`, then a non-versioned library
 will be created during build time. If you want the symlinks in the RPM
 file, you could create them in the `%install` section of your `.spec`
 file like this:
-```
+```specfile
 mv %{buildroot}/%{_libdir}/libfoo.so %{buildroot}/%{_libdir}/libfoo.so.1.0.0
 ln -s -t %{buildroot}/%{_libdir}/libfoo.so.1.0.0 %{buildroot}/%{_libdir}/libfoo.so
 ln -s -r %{buildroot}/%{_libdir}/libfoo.so.1.0.0 %{buildroot}/%{_libdir}/libfoo.so.1
@@ -194,7 +194,7 @@ following example.
 
 Store the following content in the '.gitattributes' file under the root
 of the repository,
-```
+```gitattributes
 # Use target-compatible line endings as the safe default for cross compilation.
 * text=auto eol=lf
 ```
@@ -222,7 +222,7 @@ The file will have its original line endings in your working directory
 
 If this is intentional, attributes for the file should be explicitly
 overriden in '.gitattributes'.
-```
+```gitattributes
 * text=auto eol=lf
 file-with-crlf.txt text eol=crlf
 ```

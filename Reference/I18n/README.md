@@ -53,7 +53,7 @@ Button {
 
 The qmake project (.pro) file must trigger lupdate to generate the
 translation files. For example:
-```
+```qmake
 # translations
 TS_FILE = $$OUT_PWD/$$TARGET.ts
 EE_QM = $$OUT_PWD/$$TARGET_eng_en.qm

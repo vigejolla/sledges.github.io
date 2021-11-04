@@ -96,7 +96,7 @@ the role of each of these files.
 After creating a project using the Sailfish IDE new project wizard, the
 `myfirstapp.pro` file looks like this:
 
-```
+```qmake
 TARGET = myfirstapp
 CONFIG += sailfishapp
 SOURCES += src/myfirstapp.cpp
@@ -151,7 +151,7 @@ C:\Sailfish OS\mersdk\targets\Sailfish OS-i486\usr\share\qt5\mkspecs\features
 ```
 
 The file looks like this:
-```
+```qmake
 QT += quick qml
 
 target.path = /usr/bin
@@ -189,7 +189,7 @@ The values on the right side of the `INSTALLS` declaration refer to the
 built-in target install set and three custom install sets defined above.
 For example, for the desktop integration file, an install set named
 desktop is declared:
-```
+```qmake
 desktop.files = $${TARGET}.desktop
 desktop.path = /usr/share/applications
 ```
@@ -367,7 +367,7 @@ declaration in the `sailfish.prf` file.
 Note that where the `.prf` file used Qt project variables, the `.yaml`
 file uses `.spec` file macros. The declarations for the project’s qml
 directory in the in the `.prf` file
-```
+```qmake
 qml.files = qml
 qml.path = /usr/share/$${TARGET}
 ```
@@ -449,12 +449,12 @@ marked as editable.
 Editable parts of the `.spec` are marked with `# >>` and `# <<`. For
 each step of the build process, there are markers for sections that are
 customizable. For example, the markers
-```
+```specfile
 # >> build pre
 # << build pre
 ```
 
-```
+```specfile
 # >> build post
 # << build post
 ```

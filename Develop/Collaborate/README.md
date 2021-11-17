@@ -113,6 +113,7 @@ include:
   - missing unit tests
   - performance regression
   - edge-case logic errors
+  - [qmltypes] files update forgotten
 
 Every contributor and reviewer shall be polite and considerate to each
 other when reviewing contributions and discussing those changes, and ask
